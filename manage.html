@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Crypto Portfolio — Manage</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="page-bg"></div>
+  <header class="topbar">
+    <h1>Manage Coins</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="manage.html" class="active">Manage Coins</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel manage-panel">
+      <form id="addForm" class="card glass">
+        <h3>Add / Update Coin</h3>
+        <label>Coin ID </label>
+        <input id="coinId" placeholder="bitcoin" required />
+        <label>Amount (holdings)</label>
+        <input id="coinAmount" type="number" step="any" placeholder="0.5" required />
+        <div class="form-actions">
+          <button type="submit" class="btn">Add / Update</button>
+          <button id="clearBtn" type="button" class="btn ghost">Clear All</button>
+        </div>
+        <div class="hint">Tip: use coin id (not symbol). Try <strong>bitcoin</strong>, <strong>ethereum</strong>.</div>
+      </form>
+
+      <div class="card list-card">
+        <h3>Saved Portfolio</h3>
+        <ul id="portfolioList" class="portfolio-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>LocalStorage used for persistence · Changes reflect on Dashboard</small>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/manage.js"></script>
+</body>
+</html>
