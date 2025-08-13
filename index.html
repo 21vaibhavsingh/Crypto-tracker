@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Crypto Portfolio — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page-bg"></div>
+  <header class="topbar">
+    <h1>Crypto Portfolio</h1>
+    <nav>
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="manage.html">Manage Coins</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel summary">
+      <div>
+        <h2>Total Value</h2>
+        <div id="total-value" class="big-value">$0.00</div>
+        <div class="meta">Auto refresh every 60s · Data:CoinGecko </div>
+      </div>
+      <div class="chart-card">
+        <canvas id="pieChart" width="300" height="300"></canvas>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <h3>Your Holdings</h3>
+      <div class="table-wrap">
+        <table id="portfolio-table">
+          <thead>
+            <tr>
+              <th>Coin</th>
+              <th>Price (USD)</th>
+              <th>24h %</th>
+              <th>Amount</th>
+              <th>Value (USD)</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="empty-note" class="empty">No coins yet — go to Manage Coins to add.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Authenticed by CoinGecko</small>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
